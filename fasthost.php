@@ -19,25 +19,10 @@ global $token;
 
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
-$mid = $message->message_id;
 $cid = $message->chat->id;
 $tx = $message->text;
-$uid= $message->from->id;
 $rname= $message->from->first_name;
-$rmid= $message->reply_to_message->message_id;
-$mention = $message->entities[0]->type;
-$ty = $message->chat->type;
-$title = $message->chat->title;
-$repid = $message->reply_to_message->from->id;
-$gruppa = file_get_contents("gruppa.db");
-$lichka = file_get_contents("lichka.db");
-$new = $message->new_chat_member;
-$left = $message->left_chat_member;
-$for = $message->forward_from;
-$forx = $message->forward_from_chat;
-$fadmin = $message->from->id;
-$title = $message->chat->title;
-$uid = $message->from->id;
+
 
   if ($tx=="/start") {
   UzKoDeR('sendmessage',[
