@@ -44,11 +44,6 @@ $uid = $message->from->id;
   'chat_id'=>$cid,
   'text'=>"salom *$rname* men github'da joylashganman !",
 'parse_mode'=>"markdown",
-'reply_markup'=>json_encode([ 
-        'inline_keyboard'=>[ 
-       [['text'=>"Admin", 'url'=>"t.me/uzkoder"]] 
-       ] 
-       ]) 
 ]);
 }
 
