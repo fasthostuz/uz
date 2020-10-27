@@ -16,42 +16,6 @@ global $token;
     }
 }
 
-function sendmessage($chat_id, $tx, $model){
-  UzKoDeR('sendMessage',[
-  'chat_id'=>$chat_id,
-  'text'=>$tx,
-  'parse_mode'=>$mode
-  ]);
-  }
-  function sendaction($chat_id, $action){
-  UzKoDeR('sendchataction',[
-  'chat_id'=>$chat_id,
-  'action'=>$action,
-    'parse_mode'=>$mode
-  ]);
-  }
-  function Forward($KojaShe, $AzKoja, $KodomMSG)
-{
-    UzKoDeR('ForwardMessage', [
-        'chat_id' => $KojaShe,
-        'from_chat_id' => $AzKoja,
-        'message_id' => $KodomMSG
-    ]);
-}
-mkdir('step');
-mkdir('asosiy');
-$cid1 = $message->chat->id;
-$step = file_get_contents("step/$cid1.step");
- function step($id,$value){ 
-file_put_contents("step/$cid1.step",$value);
-}
-function put($fayl,$nima){
-file_put_contents("$fayl","$nima");
-}
-function get($fayl){
-$get = file_get_contents("$fayl");  
-return $get5;
-}
 
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
@@ -74,22 +38,7 @@ $forx = $message->forward_from_chat;
 $fadmin = $message->from->id;
 $title = $message->chat->title;
 $uid = $message->from->id;
-$ismbot="teest";
-$usbot="itozalovchi_bot";
-$data = $update->callback_query->data;
-$qid = $update->callback_query->id;
-$cid2 = $update->callback_query->message->chat->id;
-$from2 = $update->callback_query->from->id;
-$mid2 = $update->callback_query->message->message_id;
 
-$ctext = $update->callback_query->message->text; 
-$callfrid = $update->callback_query->from->id; 
-$callfrusername = $update->callback_query->from->username; 
-$callfname = $update->callback_query->from->first_name;  
-$calltitle = $update->callback_query->message->chat->title; 
-$calluser = $update->callback_query->message->chat->username; 
-
-if($ty=="private"){
   if ($tx=="/start") {
   UzKoDeR('sendmessage',[
   'chat_id'=>$cid,
@@ -102,6 +51,6 @@ if($ty=="private"){
        ]) 
 ]);
 }
-}
+
 
 
