@@ -1,6 +1,6 @@
 <?php
 $token = '1352468214:AAFY5bBmtjJhTHOcsa4KgWXbBBpbPhcmGtE';
-
+echo "<a href='https://api.telegram.org/bot".$token."/setwebhook?url=".$_SERVER['SERVER_NAME']."".$_SERVER['SCRIPT_NAME']."'>👉 BOSING 👈</a>";
 function UzKoDeR($method,$datas=[]){
 global $token;
     $url = "https://api.telegram.org/bot".$token."/".$method;
