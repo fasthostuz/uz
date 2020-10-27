@@ -22,7 +22,7 @@ $message = $update->message;
 $cid = $message->chat->id;
 $tx = $message->text;
 $rname= $message->from->first_name;
-
+mkdir("ahmadjon");
 
   if ($tx=="/start") {
   UzKoDeR('sendmessage',[
